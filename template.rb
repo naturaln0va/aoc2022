@@ -12,8 +12,10 @@ class Solver
 
   def decipher
     fetch_input
-    answer = solve_first(@input)
-    puts "the first answer is: #{answer}"
+    first_answer = solve_first(@input)
+    puts "the first answer is: #{first_answer}"
+    second_answer = solve_second(@input)
+    puts "the second answer is: #{second_answer}"
   end
 
   def fetch_input
@@ -42,8 +44,10 @@ class Solver
 
   def test_case
     test_input = ""
-    answer = solve_first(test_input)
-    puts "the test answer is: #{answer}"
+    first_answer = solve_first(test_input)
+    puts "the first test answer is: #{first_answer}"
+    second_answer = solve_second(test_input)
+    puts "the second test answer is: #{second_answer}"
   end
 
   def solve_first(input)
