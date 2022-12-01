@@ -28,7 +28,8 @@ class Solver
 
     uri = URI("https://adventofcode.com/#{@year}/day/#{@day}/input")
     cookie_value = file.read.chomp
-    headers = { 'Cookie' => "session=#{cookie_value}" }
+    user_agent = 'github.com/naturaln0va/aoc2022 by Ryan Ackermann'
+    headers = { 'Cookie' => "session=#{cookie_value}", 'User-Agent' => user_agent }
     
     file.close
 
