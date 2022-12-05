@@ -53,17 +53,19 @@ class Solver
 
   def solve_first(input)
     answer = 0
+    lines = input.lines.map(&:strip)
     numbers = input.split().map { |s| s.to_i }
     answer
   end
 
   def solve_second(input)
     answer = 0
+    lines = input.lines.map(&:strip)
     numbers = input.split().map { |s| s.to_i }
     answer
   end
 end
 
-s = Solver.new(day = 1, year = 2022)
+s = Solver.new(day = 1)
 # s.decipher
 s.test_case
