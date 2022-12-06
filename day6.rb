@@ -60,14 +60,11 @@ class Solver
   end
   
   def find_unique_marker(input, target)
-    chars = input.chars
     answer = 0
     
-    chars.length.times do |i|
-      part = chars.slice(i, target)
-      
+    input.chars.each_cons(target).each_with_index do |part, index|
       if part.uniq.length == target
-        answer = i + target
+        answer = index + target
         break
       end
     end
